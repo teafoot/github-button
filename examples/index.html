@@ -16,7 +16,7 @@
   <meta name="author" content="@cicciosgamino"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>🌈 Github Button</title>
+  <title>Github Button</title>
 
   <style>
     :root {
@@ -54,11 +54,11 @@
       padding: 1rem;
     }
 
-    color-scheme-button {
-      width: 128px;
-      height: 128px;
+    github-button {
+      width: 64px;
+      height: 64px;
 
-      --icon-color: purple;
+      --icon-color: #333;
     }
   </style>
   
@@ -72,7 +72,9 @@
 
   <main>
 
-    <github-button></github-button>
+    <github-button
+      link="CICCIOSGAMINO/github-button.git">
+    </github-button>
 
   </main>
 
@@ -84,7 +86,7 @@
   <script type="module" src="../github-button.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', _ => {
-
+      console.log('@DOM-READY')
     })
   </script>
 

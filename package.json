@@ -1,6 +1,6 @@
 {
   "name": "@cicciosgamino/github-button",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple github button",
   "main": "github-button.js",
   "type": "module",
