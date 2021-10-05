@@ -1,0 +1,40 @@
+{
+  "name": "@cicciosgamino/github-button",
+  "version": "0.0.1",
+  "description": "Simple github button",
+  "main": "github-button.js",
+  "type": "module",
+  "module": "github-button.js",
+  "scripts": {
+    "dev": "web-dev-server --node-resolve --app-index examples/index.html --watch --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CICCIOSGAMINO/github-button.git"
+  },
+  "keywords": [
+    "Gihub",
+    "Button",
+    "Github Button",
+    "SVG",
+    "CustomElement",
+    "Lit"
+  ],
+  "author": "@cicciosgamino",
+  "license": "GPL-3.0",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/CICCIOSGAMINO/github-button/issues"
+  },
+  "homepage": "https://github.com/CICCIOSGAMINO/github-button#readme",
+  "dependencies": {
+    "lit": "*"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.24"
+  },
+  "directories": {
+    "example": "examples"
+  }
+}
