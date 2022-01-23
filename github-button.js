@@ -6,7 +6,6 @@ class GithubButton extends LitElement {
       * {
         margin: 0;
         padding: 0;
-        /* --icon-color: purple; */
       }
 
       :host {
@@ -64,22 +63,35 @@ class GithubButton extends LitElement {
 
   static get properties () {
     return {
-      link: String
+      link: String,
+      backgroundColor: String,
+      openInNewTab: Boolean
     }
   }
 
-  #handleClick (event) {
+  handleClick (event) {
     const githubBaseURL = 'https://github.com'
     const githubURL = new URL(this.link, githubBaseURL)
-    window.location.href = githubURL
+
+    if (this.openInNewTab === 'true') {
+      window.open(githubURL.href, '_blank') // target
+    } else {
+      window.location.href = githubURL
+    }
   }
 
   render () {
+    let additionalStyles = "";
+    if (this.backgroundColor != "") {
+      additionalStyles = `background-color: ${this.backgroundColor};`
+    }
+
     return html`
       <button id="btn"
         title="github link"
         aria-label="github link"
-        @click=${this.#handleClick}>
+        @click=${this.handleClick}
+        style=${additionalStyles}>
 
         <svg version="1.1" viewBox="0 0 120 120"
           class="animation-move" role="img" aria-hidden="true" focusable="false" >
